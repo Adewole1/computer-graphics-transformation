@@ -1,0 +1,62 @@
+<TransformationPage>:
+    GridLayout:
+        cols: 2
+        size: root.width - 400, root.height - 100
+        pos: 100, 50
+
+        Label:
+            text: "Enter the transformation you want to do: \nTranslate, rOtate, sCale, Shear, Reflect \nor Done when you are done or cLear to start again: \n"
+            id: label1
+        TextInput:
+            multiline:False
+            id: input
+            text: ''
+        Label:
+            text: ""
+            id: label2
+        Button:
+            text:"Enter"
+            id: btn
+            on_press: root.transform()
+
+
+<CoordinatePage>:
+    GridLayout:
+        cols: 2
+        size: root.width - 400, root.height - 100
+        pos: 100, 50
+
+        Label:
+            text: "Enter the coordinates of the shape in the format (x,y) \nor 'D' when done or cLear to start again or \nStart again: \n"
+            id: label1
+        TextInput:
+            multiline:False
+            id: input
+            text: ""
+        Label:
+            text: ""
+            id: label2
+        Button:
+            text:"Enter"
+            id: btn
+            on_press: root.point()
+
+
+<TranslatePage>:
+    GridLayout:
+        cols: 2
+        size: root.width - 400, root.height - 100
+        Label:
+            text: "Enter the translation in x-direction: \n"
+            id: trans_label
+        TextInput:
+            multiline:False
+            id: input
+            text: ""
+        Label:
+            text: ""
+            id: label2
+        Button:
+            text:"Enter"
+            id: btn
+            on_press: root.translate()
